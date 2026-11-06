@@ -1,0 +1,48 @@
+# ---------- Secrets (most important) ----------
+.env
+.env.*
+!.env.example
+src/main/resources/application-local.yml
+*.pem
+*.key
+
+# ---------- Java / Maven ----------
+target/
+*.class
+*.jar
+*.war
+!.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+*.log
+logs/
+
+# ---------- Node / React (Vite) ----------
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.local
+
+# ---------- IDEs ----------
+.idea/
+*.iml
+.vscode/
+.classpath
+.project
+.settings/
+.factorypath
+*.swp
+
+# ---------- OS ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---------- Local data / misc ----------
+pgdata/
+*.zip
+coverage/
+
+postman

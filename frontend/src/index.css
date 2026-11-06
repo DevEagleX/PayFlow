@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  background-color: #f6f5fb;
+}
+
+body {
+  @apply bg-canvas font-sans text-ink antialiased;
+}
+
+:focus-visible {
+  outline: 2px solid #4a43d6;
+  outline-offset: 2px;
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl bg-surface shadow-card;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold transition-colors disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply btn bg-brand text-white hover:bg-brand-dark;
+  }
+  .btn-soft {
+    @apply btn bg-brand-soft text-brand-dark hover:bg-[#E0DEF8];
+  }
+  .btn-ghost {
+    @apply btn border border-line bg-surface text-ink hover:bg-canvas;
+  }
+
+  .input {
+    @apply w-full rounded-xl border border-line bg-canvas px-4 py-3 text-sm text-ink placeholder:text-faint focus:border-brand focus:bg-surface focus:outline-none focus:ring-2 focus:ring-brand/20;
+  }
+  .label {
+    @apply mb-1.5 block text-xs font-semibold uppercase tracking-wide text-muted;
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-xl bg-line/70;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

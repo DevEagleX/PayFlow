@@ -1,0 +1,10 @@
+# Copy this file to application-local.yml (gitignored) for local development
+# and run with: --spring.profiles.active=local
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/paytab
+    username: paytab
+    password: admin123
+jwt:
+  secret: 1a85d62e211d5fa3cd78a51a2e4a7e7f9c87d9998d0d4f885b57e4a7a257a49c
+  expiration-ms: 86400000
